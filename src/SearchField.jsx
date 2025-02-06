@@ -29,7 +29,6 @@ function SearchField() {
   }, []);
 
   useEffect(() => {
-    // Filter countries based on the search term
     const filtered = countries.filter(country =>
       country.common.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -38,7 +37,7 @@ function SearchField() {
 
   return (
     <div>
-        <br/>
+      <nav style={{backgroundColor:"lightgrey", height:"50px", marginBottom:"20px", display:"flex", justifyContent:"center"}}>
       <input
         className="search-countries"
         type="text"
@@ -46,6 +45,7 @@ function SearchField() {
         value={searchTerm}
         onChange={handleChange}
       />
+      </nav>
       
       <div className="countryCard">
         {filteredCountries && filteredCountries.length > 0 ? (
