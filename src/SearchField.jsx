@@ -17,9 +17,13 @@ function SearchField() {
 
   useEffect(() => {
     const fetchData = async () => {
+      try{
       const responseData = await fetch(URL);
       const apiData = await responseData.json();
       setCountries(apiData);
+      } catch(error){
+        console.error("Error", error);
+      }
     };
     fetchData();
   }, []);
