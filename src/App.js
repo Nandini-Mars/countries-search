@@ -3,8 +3,6 @@ import './App.css';
 import SearchField from "./SearchField";
 
 function App() {
-  const [countries, setCountries] = useState([]);
-
 
   return (
     <div>

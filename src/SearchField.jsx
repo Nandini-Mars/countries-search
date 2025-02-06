@@ -44,14 +44,12 @@ function SearchField() {
       />
       
       <div className="countryCard">
-      {filteredCountries.length > 0 ? (
-        filteredCountries.map((country, idx) => (
-          <CountryCard key={idx} name={country.common} flag={country.png} />
-        ))
-      ) : (
-        <p>No countries found</p>
-      )}
-    </div>
+        {filteredCountries && filteredCountries.length > 0 ? (
+          filteredCountries.map((country, idx) => (
+            <CountryCard key={idx} name={country.common} flag={country.png} />
+          ))
+        ) : null} {/* Nothing will render if no countries match */}
+      </div>
     </div>
   );
 }
