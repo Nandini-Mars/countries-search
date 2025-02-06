@@ -4,7 +4,7 @@ import './SearchField.css';
 import CountryCard from './CountryCard';
 
 function SearchField() {
-  // States for country data and search input
+
   const [countries, setCountries] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredCountries, setFilteredCountries] = useState([]);
@@ -52,7 +52,7 @@ function SearchField() {
           filteredCountries.map((country, idx) => (
             <CountryCard key={idx} name={country.common} flag={country.png} />
           ))
-        ) : null} {/* Nothing will render if no countries match */}
+        ) : null}
       </div>
     </div>
   );
